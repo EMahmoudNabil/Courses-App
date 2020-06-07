@@ -58,7 +58,7 @@ class App extends Component{
     })
     return(
       <div className="App">
-      <h1 className ="text-center"> Add Courses </h1>
+      <h1 className ="text-center"> Add Courses App </h1>
      
       <CourseForm current={this.state.current} updateCourse={this.updateCourse} createCourse={this.createCourse} />
       <ul >{courseList}</ul>
