@@ -34,11 +34,21 @@ class App extends Component{
 
   }
 
+  //Delete Course
+  deleteCourse=(index)=>{
+    let courses = this.state.courses;
+    courses.splice(index ,1);
+    this.setState({
+      courses
+    })
+
+  }
+
 
   render(){
     const {courses} =this.state;
     const courseList = courses.map((course , index )=>{
-        return     <CourseList detail={course} key={index} />
+        return     <CourseList detail={course} key={index} index={index} deleteCourse ={this.deleteCourse} />
     })
     return(
       <div className="App">
