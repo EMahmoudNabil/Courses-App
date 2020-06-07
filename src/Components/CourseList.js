@@ -6,9 +6,9 @@ import '../App.css';
 class CourseList extends Component{
   render(){
     return(
-      <div className="App">
-        Course List
-    </div>
+      <React.Fragment >
+        <li>{this.props.detail.name}</li>
+    </React.Fragment>
 
     )
 

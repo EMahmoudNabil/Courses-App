@@ -16,11 +16,16 @@ class App extends Component{
   }
 
   render(){
+    const {courses} =this.state;
+    const courseList = courses.map((course , index )=>{
+        return     <CourseList detail={course} key={index} />
+    })
     return(
       <div className="App">
       <h1 className ="text-center"> Add Courses </h1>
+     
       <CourseForm />
-      <CourseList />
+      <ul >{courseList}</ul>
 
     </div>
 
